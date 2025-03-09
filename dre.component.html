@@ -1,0 +1,47 @@
+
+<div>
+<h2>DRE Records</h2>
+<hr>
+<!-- Filter Section -->
+<label>Filter by Status:</label>
+<select [(ngModel)]="filterStatus" (change)="filterRecords()">
+  <option value="">All</option>
+  <option value="Active">Active</option>
+  <option value="Inactive">Inactive</option>
+</select>
+<br>
+<hr>
+<!-- Search Bar -->
+<label>Search by Name:</label>
+<input type="text" [(ngModel)]="searchTerm" (input)="searchRecords()" placeholder="Enter name">
+<br>
+<hr>
+<!-- Add New Button -->
+<button (click)="addNewRecord()" style="margin-left: 110px;">Add New Record</button>
+<br>
+<hr>
+<!-- Table of Records -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Certification Date</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr *ngFor="let record of filteredRecords" style="border: 1px solid black;">
+      <td>{{ record.id }}</td>
+      <td>{{ record.name }}</td>
+      <td>{{ record.certification_date }}</td>
+      <td>{{ record.status }}</td>
+      <td>
+        <button (click)="editRecord(record.id!)">Edit</button>
+        <button (click)="deleteRecord(record.id!)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

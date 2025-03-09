@@ -1,0 +1,19 @@
+table{
+    background-color: gainsboro;
+    width: 400px; 
+    height: auto;   
+    border: 1px solid;
+}
+div{
+    background-color: rgb(190, 204, 204);; 
+    height: auto;
+    width: 410px; 
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+td{
+    border: 1px solid black;
+}
+
+
