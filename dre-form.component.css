@@ -1,0 +1,48 @@
+div{
+  background-color: rgb(190, 204, 204);
+  margin-left: 40%; 
+  margin-top: 10%;
+  width: 400px;
+  height: auto; 
+ }
+ 
+ h2{
+   text-align: center;
+ }
+ 
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+  }
+  
+  button {
+    padding: 15px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button[type="button"] {
+    background-color: #cccccc;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  

@@ -1,0 +1,22 @@
+<div>
+<h2>{{ isEditMode ? 'Edit' : 'Add' }} DRE Record</h2>
+<hr>
+
+<form (ngSubmit)="saveRecord()">
+  <label>Name:</label>
+  <input type="text" [(ngModel)]="record.name" name="name" required>
+
+  <label>Certification Date:</label>
+  <input type="date" [(ngModel)]="record.certification_date" name="certification_date" required>
+  <p *ngIf="dateError" style="color: red;">{{ dateError }}</p>
+
+  <label>Status:</label>
+  <select [(ngModel)]="record.status" name="status">
+    <option value="Active">Active</option>
+    <option value="Inactive">Inactive</option>
+  </select>
+
+  <button type="submit">{{ isEditMode ? 'Update' : 'Save' }}</button>
+  <button type="button" (click)="router.navigate(['/dre'])">Cancel</button>
+</form>
+</div>
